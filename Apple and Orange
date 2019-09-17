@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+int main()
+{
+    int s,t,a,b,m,n,startapple,endapple,startorange,endorange,i,p1,p2,c=0,d=0;
+    cin>>s>>t; //starting and ending point of the home
+    cin>>a>>b; //apple and orange tree position
+    cin>>m>>n; //number of apple and orange
+    startapple=a+(s-a);
+    endapple=startapple+(t-startapple);
+    startorange=b-(b-t);
+    endorange=startorange-(t-s);
+    long long int x[m],y[n];
+    for(i=0;i<m;i++)
+        cin>>x[i];
+    for(i=0;i<n;i++)
+        cin>>y[i];
+    for(i=0;i<m;i++)
+    {
+    
+        if(x[i]>0)
+        {
+            p1=a+x[i];
+            if(p1>=startapple && p1<=endapple)
+                    c++;
+        }
+       
+    }
+     for(i=0;i<n;i++)
+    {
+        if(y[i]<0)
+        {
+            p2=b+y[i];
+            if(p2>=endorange && p2<=startorange)
+                    d++;
+        }
+    }
+
+    cout<<c<<endl;
+    cout<<d;
+}
