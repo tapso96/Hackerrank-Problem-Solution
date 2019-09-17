@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+int main()
+{
+    long long int arr[10000] , i, maxi, mini,sum=0;
+    for (i = 0; i < 5; i++)
+        cin >> arr[i];
+    int min = arr[0];
+    int max = arr[0];
+    for (i = 0; i < 5; i++)
+    {
+        if (max < arr[i])  //maximum value of an array
+            max = arr[i];
+        if (min > arr[i])  //minimum value of an array
+            min = arr[i];
+    }
+   
+  
+    for(i=0;i<5;i++)
+        sum=sum+arr[i];
+    mini=sum-max;
+    maxi=sum-min;   
+    cout<< mini<<" "<<maxi;
+    
+}
