@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+int main()
+{
+    long int a[100000];
+  long long int i,n,j,x=0,y=0,z=0;
+    float s,t,u;
+    scanf("%lld",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%ld",&a[i]);
+    }
+    for(j=0;j<n;j++)
+    {
+        if(a[j]>0)
+        {
+            ++x;
+            
+            
+        }
+        else if(a[j]<0)
+        {
+                ++y;
+            
+            
+        }
+        else if(a[j]==0)
+            {
+                ++z;
+            
+            }
+    }
+             s=(float)x/n;
+             printf("%f",s); 
+                t=(float)y/n;
+                printf("\n%f",t);
+                u=(float)z/n;
+                printf("\n%f",u);
+
+    
+return 0;
+}
